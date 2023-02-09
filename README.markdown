@@ -7,6 +7,8 @@ Run `cargo bench` to run benchmarks.
 
 ## My initial results
 
+Here's what I get running `cargo bench` on my Intel i7-7700HQ (8) @ 3.800GHz (System76 Oryx Pro running Pop_OS 20.04 LTS):
+
 ```text
 SortWords/Using regular stable sort
                         time:   [18.010 ms 18.116 ms 18.239 ms]
