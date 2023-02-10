@@ -10,23 +10,22 @@ Run `cargo bench` to run benchmarks.
 Here's what I get running `cargo bench` on my Intel i7-7700HQ (8) @ 3.800GHz (System76 Oryx Pro running Pop_OS 20.04 LTS):
 
 ```text
-SortWords/Using regular stable sort
-                        time:   [18.010 ms 18.116 ms 18.239 ms]
-                        change: [-4.0765% -2.9408% -1.8513%] (p = 0.00 < 0.05)
-                        Performance has improved.
-Found 7 outliers among 100 measurements (7.00%)
-  4 (4.00%) high mild
-  3 (3.00%) high severe
-SortWords/Using unstable sort
-                        time:   [17.559 ms 17.655 ms 17.781 ms]
-                        change: [-9.8066% -8.0489% -6.3420%] (p = 0.00 < 0.05)
-                        Performance has improved.
-Found 10 outliers among 100 measurements (10.00%)
-  4 (4.00%) high mild
-  6 (6.00%) high severe
-SortWords/Using glidesort
-                        time:   [17.540 ms 17.585 ms 17.635 ms]
-Found 8 outliers among 100 measurements (8.00%)
-  3 (3.00%) high mild
-  5 (5.00%) high severe
+Benchmarking SortWords/Using regular stable sort: Collecting 25 samples SortWords/Using regular stable sort
+        time:   [184.27 ms 192.76 ms 202.13 ms]
+        change: [-1.0745% +3.9177% +9.7754%] (p = 0.17 > 0.05)
+        No change in performance detected.
+Found 1 outliers among 25 measurements (4.00%)
+1 (4.00%) high mild
+Benchmarking SortWords/Using unstable sort: Warming up for 3.0000 s
+Warning: Unable to complete 25 samples in 5.0s. You may wish to increase target time to 5.3s, or reduce sample count to 20.
+Benchmarking SortWords/Using unstable sort: Collecting 25 samples in estSortWords/Using unstable sort
+        time:   [210.85 ms 214.36 ms 217.97 ms]
+        change: [-5.8918% -2.5614% +0.8032%] (p = 0.17 > 0.05)
+        No change in performance detected.
+Benchmarking SortWords/Using glidesort: Warming up for 3.0000 s
+Warning: Unable to complete 25 samples in 5.0s. You may wish to increase target time to 5.8s, or reduce sample count to 20.
+Benchmarking SortWords/Using glidesort: Collecting 25 samples in estimatSortWords/Using glidesort
+        time:   [215.95 ms 220.46 ms 225.15 ms]
+        change: [-0.7737% +1.5986% +4.1985%] (p = 0.21 > 0.05)
+        No change in performance detected.
 ```
