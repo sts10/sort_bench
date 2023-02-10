@@ -19,12 +19,11 @@ pub fn make_vec_from_file(filename: &PathBuf) -> Vec<String> {
 
 pub fn criterion_benchmark(c: &mut Criterion) {
     let mut group = c.benchmark_group("SortWords");
-    // group.sample_size(100);
     let locale: Locale = "en-US".parse().unwrap();
 
     let mut unsorted_word_list = make_vec_from_file(&PathBuf::from("./benches/wordlist.txt"));
     group.bench_function("Using regular stable sort", |b| {
-        b.iter(|| stable_sort(&mut unsorted_word_list, &locale))
+        b.iter(|| stable_sort(&unsorted_word_list, &locale))
     });
 
     let mut unsorted_word_list = make_vec_from_file(&PathBuf::from("./benches/wordlist.txt"));
