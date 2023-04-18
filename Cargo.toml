@@ -2,6 +2,7 @@
 name = "sort_bench"
 version = "0.1.1"
 edition = "2021"
+license = "BlueOak-1.0.0"
 
 [dependencies]
 icu_collator = "1.1.0"
